@@ -2,7 +2,7 @@ sudo pacman -S linux linux-headers linux-firmware
 echo "please adjust change replace if need other url of repo as archlinux user as manual download or ignore it"
 sudo mv /boot/initramfs-linux.img /boot/initramfs-linux.img.backup
 sudo mv /boot/vmlinuz-linux /boot/vmlinuz-linux.backup
-echo "old file kernel was ready as backup..."
+echo "old file kernel was ready as backup on home..."
 echo "running owner repo as github on ulebuntupro "
 mkdir kernel ; mv kernel kernel-old-folder && git clone --depth=1 https://github.com/ulebuntupro/repair-bootloader-kernel-arch.git kernel
 echo "downloaded and reading cd kernel..."
@@ -26,3 +26,5 @@ echo "but maybe you need run script v1 named : "
 echo "repair-bootloader-all as bash file"
 echo "but completed sucses"
 echo "repair-bootloader-all-v2 on carrent bash script"
+sudo mv /boot/initramfs-linux.img.backup /home/
+sudo mv /boot/vmlinuz-linux.backup /home/
